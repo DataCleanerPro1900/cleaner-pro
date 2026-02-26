@@ -1,0 +1,57 @@
+{
+  "test_time": "2026-02-26 12:19:54.123630",
+  "test_status": "success",
+  "test_duration_seconds": 0.001148,
+  "data_statistics": {
+    "total_records": 10,
+    "cleaned_records": 5,
+    "average_age": 33.1,
+    "average_score": 86.4,
+    "max_score": 95.0,
+    "min_score": 76.5,
+    "department_distribution": {
+      "技术部": 4,
+      "销售部": 2,
+      "市场部": 2,
+      "人事部": 1
+    }
+  },
+  "test_summary": {
+    "total_tests": 5,
+    "passed_tests": 5,
+    "failed_tests": 0,
+    "pass_rate": 100
+  },
+  "test_cases": [
+    {
+      "id": 1,
+      "description": "Missing name handling",
+      "passed": true,
+      "execution_time": 45
+    },
+    {
+      "id": 2,
+      "description": "Missing age imputation",
+      "passed": true,
+      "execution_time": 32
+    },
+    {
+      "id": 3,
+      "description": "Missing score imputation",
+      "passed": true,
+      "execution_time": 28
+    },
+    {
+      "id": 4,
+      "description": "Missing department handling",
+      "passed": true,
+      "execution_time": 51
+    },
+    {
+      "id": 5,
+      "description": "Statistical calculations",
+      "passed": true,
+      "execution_time": 37
+    }
+  ]
+}

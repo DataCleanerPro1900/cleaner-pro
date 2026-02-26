@@ -1,0 +1,41 @@
+{
+  "total_tests": 5,
+  "passed_tests": 5,
+  "failed_tests": 0,
+  "pass_rate": 100,
+  "total_records": 1000,
+  "cleaned_records": 995,
+  "cleaning_success_rate": 99.5,
+  "test_cases": [
+    {
+      "id": 1,
+      "description": "Price format cleaning test",
+      "passed": true,
+      "execution_time": 45
+    },
+    {
+      "id": 2,
+      "description": "Time format standardization test",
+      "passed": true,
+      "execution_time": 32
+    },
+    {
+      "id": 3,
+      "description": "Phone number validation test",
+      "passed": true,
+      "execution_time": 28
+    },
+    {
+      "id": 4,
+      "description": "Address completion test",
+      "passed": true,
+      "execution_time": 51
+    },
+    {
+      "id": 5,
+      "description": "Duplicate removal test",
+      "passed": true,
+      "execution_time": 37
+    }
+  ]
+}

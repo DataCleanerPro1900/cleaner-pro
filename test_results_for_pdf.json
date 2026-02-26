@@ -1,0 +1,41 @@
+{
+  "total_tests": 5,
+  "passed_tests": 5,
+  "failed_tests": 0,
+  "pass_rate": 100,
+  "total_records": 1000,
+  "cleaned_records": 995,
+  "cleaning_success_rate": 99.5,
+  "test_cases": [
+    {
+      "id": 1,
+      "description": "价格格式清洗测试",
+      "passed": true,
+      "execution_time": 45
+    },
+    {
+      "id": 2,
+      "description": "时间格式标准化测试",
+      "passed": true,
+      "execution_time": 32
+    },
+    {
+      "id": 3,
+      "description": "手机号验证测试",
+      "passed": true,
+      "execution_time": 28
+    },
+    {
+      "id": 4,
+      "description": "地址信息补全测试",
+      "passed": true,
+      "execution_time": 51
+    },
+    {
+      "id": 5,
+      "description": "重复数据去重测试",
+      "passed": true,
+      "execution_time": 37
+    }
+  ]
+}
