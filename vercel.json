@@ -2,18 +2,29 @@
   "version": 2,
   "builds": [
     {
-      "src": "api/collect.py",
-      "use": "@vercel/python"
+      "src": "vercel_index.html",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
     {
-      "src": "/api/collect",
-      "dest": "/api/collect.py"
+      "src": "/",
+      "dest": "/vercel_index.html"
+    },
+    {
+      "src": "/index.html",
+      "dest": "/vercel_index.html"
     },
     {
       "src": "/(.*)",
-      "dest": "/$1"
+      "dest": "/vercel_index.html"
     }
-  ]
+  ],
+  "env": {
+    "NODE_ENV": "production"
+  },
+  "github": {
+    "enabled": true,
+    "silent": true
+  }
 }
