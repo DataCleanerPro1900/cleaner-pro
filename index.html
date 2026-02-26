@@ -3,177 +3,329 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Cleaner Pro - 免费试用</title>
+    <title>Cleaner Pro官方店 - 数据清洗效率专家</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: #333;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
+        
         .container {
-            background: white;
-            padding: 40px;
-            border-radius: 16px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-            max-width: 500px;
-            width: 90%;
-        }
-        h1 {
-            color: #333;
-            margin-bottom: 10px;
-            font-size: 28px;
-        }
-        .subtitle {
-            color: #666;
-            margin-bottom: 30px;
-            font-size: 16px;
-        }
-        .features {
-            background: #f8f9fa;
+            max-width: 1200px;
+            margin: 0 auto;
             padding: 20px;
-            border-radius: 8px;
+        }
+        
+        .header {
+            text-align: center;
+            padding: 40px 20px;
+            color: white;
+        }
+        
+        .logo {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .tagline {
+            font-size: 20px;
+            opacity: 0.9;
             margin-bottom: 30px;
         }
-        .features h3 {
-            color: #333;
-            margin-bottom: 15px;
-            font-size: 18px;
+        
+        .main-content {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            margin-bottom: 40px;
         }
-        .features ul {
-            list-style: none;
-            color: #555;
+        
+        .product-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
         }
-        .features li {
-            padding: 8px 0;
-            padding-left: 25px;
-            position: relative;
+        
+        @media (max-width: 768px) {
+            .product-section {
+                grid-template-columns: 1fr;
+            }
         }
-        .features li:before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: #667eea;
-            font-weight: bold;
+        
+        .product-info {
+            padding: 20px;
         }
-        .form-group {
+        
+        .product-title {
+            font-size: 32px;
+            color: #2d3748;
             margin-bottom: 20px;
         }
-        label {
-            display: block;
-            margin-bottom: 8px;
-            color: #333;
-            font-weight: 500;
+        
+        .product-description {
+            font-size: 18px;
+            color: #4a5568;
+            margin-bottom: 30px;
         }
-        input[type="email"] {
-            width: 100%;
-            padding: 12px 16px;
-            border: 2px solid #e0e0e0;
-            border-radius: 8px;
-            font-size: 16px;
-            transition: border-color 0.3s;
+        
+        .features {
+            list-style: none;
+            margin-bottom: 30px;
         }
-        input[type="email"]:focus {
-            outline: none;
-            border-color: #667eea;
+        
+        .features li {
+            padding: 10px 0;
+            border-bottom: 1px solid #e2e8f0;
+            display: flex;
+            align-items: center;
         }
-        button {
-            width: 100%;
-            padding: 14px;
+        
+        .features li:before {
+            content: "✓";
+            color: #48bb78;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .price-section {
+            background: #f7fafc;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+        }
+        
+        .original-price {
+            font-size: 24px;
+            color: #a0aec0;
+            text-decoration: line-through;
+            margin-bottom: 10px;
+        }
+        
+        .current-price {
+            font-size: 48px;
+            color: #e53e3e;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        .buy-button {
+            display: inline-block;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
+            padding: 18px 50px;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: transform 0.3s, box-shadow 0.3s;
             border: none;
-            border-radius: 8px;
-            font-size: 16px;
-            font-weight: 600;
             cursor: pointer;
-            transition: transform 0.2s, box-shadow 0.2s;
+            width: 100%;
+            max-width: 300px;
         }
-        button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+        
+        .buy-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
         }
-        .privacy {
-            margin-top: 20px;
-            font-size: 12px;
-            color: #999;
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 40px;
+        }
+        
+        .stat-item {
             text-align: center;
+            padding: 20px;
+            background: #f7fafc;
+            border-radius: 10px;
         }
-        #success-message {
-            display: none;
-            text-align: center;
-            padding: 40px;
-        }
-        #success-message h2 {
+        
+        .stat-number {
+            font-size: 36px;
+            font-weight: bold;
             color: #667eea;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
-        #success-message p {
-            color: #666;
+        
+        .stat-label {
+            color: #718096;
+            font-size: 14px;
+        }
+        
+        .footer {
+            text-align: center;
+            color: white;
+            padding: 40px 20px;
+            opacity: 0.8;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 100px 20px;
+            color: white;
+            font-size: 24px;
+        }
+        
+        .payment-methods {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .payment-method {
+            background: white;
+            padding: 10px 20px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .testimonials {
+            margin-top: 40px;
+            padding: 30px;
+            background: #f7fafc;
+            border-radius: 15px;
+        }
+        
+        .testimonial {
+            font-style: italic;
+            color: #4a5568;
+            margin-bottom: 20px;
+        }
+        
+        .author {
+            text-align: right;
+            color: #718096;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div id="form-section">
-            <h1>🚀 Data Cleaner Pro</h1>
-            <p class="subtitle">专业的数据清洗工具，让数据处理效率提升 10 倍</p>
-            
-            <div class="features">
-                <h3>免费获取：</h3>
-                <ul>
-                    <li>Data Cleaner Pro 7天免费试用版</li>
-                    <li>《Python数据清洗实战指南》PDF</li>
-                    <li>100+ 常用数据清洗代码模板</li>
-                    <li>1对1技术支持服务</li>
-                </ul>
-            </div>
-            
-            <form id="email-form">
-                <div class="form-group">
-                    <label for="email">输入您的邮箱地址：</label>
-                    <input type="email" id="email" name="email" placeholder="example@email.com" required>
-                </div>
-                <button type="submit">立即获取免费资源</button>
-            </form>
-            
-            <p class="privacy">我们尊重您的隐私，邮箱仅用于发送资料，不会用于其他用途。</p>
+        <div class="header">
+            <div class="logo">Cleaner Pro</div>
+            <div class="tagline">数据清洗效率提升90%的专家工具</div>
         </div>
         
-        <div id="success-message">
-            <h2>🎉 提交成功！</h2>
-            <p>感谢您的订阅，相关资料已发送到您的邮箱，请查收。</p>
+        <div class="main-content">
+            <div class="product-section">
+                <div class="product-info">
+                    <h1 class="product-title">Data Cleaner Pro 专业版</h1>
+                    <p class="product-description">
+                        专为电商、数据分析师、办公人员设计的智能数据清洗工具。
+                        将3.5小时的手工清洗工作压缩到15分钟，效率提升90%以上。
+                    </p>
+                    
+                    <ul class="features">
+                        <li>支持CSV、Excel、PDF、JSON多种格式</li>
+                        <li>自动数据清洗和标准化</li>
+                        <li>智能错误检测和修复</li>
+                        <li>一键生成PDF分析报告</li>
+                        <li>批量处理，支持百万行数据</li>
+                        <li>无需编程，图形界面操作</li>
+                        <li>跨平台支持（Windows/macOS/Linux）</li>
+                        <li>永久使用，免费更新</li>
+                    </ul>
+                    
+                    <div class="testimonials">
+                        <div class="testimonial">
+                            "之前每天要花3个多小时处理店铺订单数据，现在用Cleaner Pro只要15分钟，效率提升太明显了！"
+                        </div>
+                        <div class="author">- 淘宝店主张先生</div>
+                    </div>
+                </div>
+                
+                <div class="price-section">
+                    <div class="original-price">原价：￥49.9</div>
+                    <div class="current-price">限时特价：￥9.9</div>
+                    <p style="color: #718096; margin-bottom: 30px;">永久使用，7天无理由退款</p>
+                    
+                    <button class="buy-button" onclick="startPayment()">立即购买</button>
+                    
+                    <div class="payment-methods">
+                        <div class="payment-method">
+                            <span>微信支付</span>
+                        </div>
+                        <div class="payment-method">
+                            <span>支付宝</span>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 30px; font-size: 14px; color: #a0aec0;">
+                        ✅ 安全支付 | ✅ 自动发货 | ✅ 7×12小时客服
+                    </div>
+                </div>
+            </div>
+            
+            <div class="stats">
+                <div class="stat-item">
+                    <div class="stat-number">90%</div>
+                    <div class="stat-label">效率提升</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100+</div>
+                    <div class="stat-label">用户验证</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">99.5%</div>
+                    <div class="stat-label">准确率</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Cleaner Pro官方店 © 2026 | 数据清洗效率专家</p>
+            <p style="margin-top: 10px; font-size: 14px;">
+                客服微信：[你的微信号] | 响应时间：<5分钟
+            </p>
         </div>
     </div>
-
+    
     <script>
-        document.getElementById('email-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const email = document.getElementById('email').value;
+        function startPayment() {
+            // 显示加载状态
+            const button = document.querySelector('.buy-button');
+            const originalText = button.textContent;
+            button.textContent = '正在创建订单...';
+            button.disabled = true;
             
-            // 发送请求到后端
-            fetch('/api/collect', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({email: email})
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    // 显示成功消息
-                    document.getElementById('form-section').style.display = 'none';
-                    document.getElementById('success-message').style.display = 'block';
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                alert('提交失败，请重试');
-            });
+            // 这里将调用虎皮椒支付API
+            // 实际开发中需要调用后端API创建支付订单
+            
+            // 模拟支付流程
+            setTimeout(() => {
+                alert('支付系统正在开发中，即将上线！\n\n当前可通过以下方式购买：\n1. 扫码支付￥9.9\n2. 发送支付截图至客服微信\n3. 获取下载链接');
+                button.textContent = originalText;
+                button.disabled = false;
+            }, 1000);
+        }
+        
+        // 页面加载完成后的初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Cleaner Pro官方店已加载');
+            console.log('Vercel域名: https://cleaner-pro-6owx.vercel.app/');
+            console.log('支付平台: 虎皮椒支付');
+            
+            // 显示当前时间
+            const now = new Date();
+            console.log('访问时间:', now.toLocaleString('zh-CN'));
         });
     </script>
 </body>
